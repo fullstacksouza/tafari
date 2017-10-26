@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Sao_Paulo',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt_BR',
 
     /*
     |--------------------------------------------------------------------------
@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Pixelpeter\Woocommerce\WoocommerceServiceProvider::class,
+        Dawson\Youtube\YoutubeServiceProvider::class,
 
     ],
 
@@ -230,6 +231,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Woocommerce' => Pixelpeter\Woocommerce\Facades\Woocommerce::class,
+        'Youtube' => Dawson\Youtube\Facades\Youtube::class,
 
     ],
 

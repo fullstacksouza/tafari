@@ -31,15 +31,16 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 Route::get('/','Painel\PainelController@index');
 Route::get('/get','Painel\PainelController@countSubscribers');//contador de inscritos e de views Youtube
 Route::post('youtube/upload','Painel\YoutubeController@upload');//upload de video para o youtube
+//Calendario
 Route::get('agenda', 'Painel\EventController@index');//calendario
-Route::post('evento/adicionar', 'Painel\EventController@addEvent');//adicionar um evento no calendario
-Route::post('evento/{id}/deletar', 'Painel\EventController@deleteEvent');//adicionar um evento do calendario
-Route::post('evento/{id}/atualizar', 'Painel\EventController@updateEvent');//atualizar evento no calendario
+Route::post('evento/adicionar', 'Painel\EventController@addEvent');//adicionar um evento 
+Route::post('evento/{id}/deletar', 'Painel\EventController@deleteEvent');//remover um evento
+Route::post('evento/{id}/atualizar', 'Painel\EventController@updateEvent');//atualizar evento
+//Loja - Pedidos
 Route::get('loja/pedidos','Painel\WoocommerceController@getOrders');
-Route::get('loja/pedidos/detalhes',function(){
-	return view('painel.store.order-detail');
-});
 Route::get('loja/pedidos/{id}/detalhes','Painel\WoocommerceController@getOrderDetail');
+//Loja-Produtos
+Route::get('loja/produtos','Painel\WoocommerceController@getProducts');
 		
 	});
 

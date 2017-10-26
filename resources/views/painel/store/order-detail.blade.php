@@ -25,7 +25,8 @@
                         <div class="col-xs-12 invoice-header">
                           <h1>
                                           <i class="fa fa-globe"></i> Pedido.
-                                          <small class="pull-right">Data: {{$order['date_created']}}</small>
+                                          <small class="pull-right" >Data: <p id="order-date">{{$order['date_created']}}</p></small>
+                                         
                                       </h1>
                         </div>
                         <!-- /.col -->
@@ -81,15 +82,22 @@
                               </tr>
                             </thead>
                             <tbody>
-                              
+                              @php
+                                $i= 0;
+                                @endphp
                               @foreach($order['line_items'] as $item)
-                              
+                             
                               <tr>
                                 <td>{{$item['quantity']}}</td>
                                 <td>{{$item['name']}}</td>
                                 <td>{{$item['sku']}}</td>
+                                
+
                                 <td>R${{$item['subtotal']}}</td>
                               </tr>
+                              @php
+                               $i += $item['subtotal'];
+                               @endphp
                               @endforeach
                               
                             </tbody>
@@ -112,15 +120,16 @@
                                   <td>{{$order['payment_method_title']}}</td>
                                 </tr>
                                 <tr>
+
                                   <th style="width:50%">Tipo de pagamento:</th>
-                                  <td>{{$order['meta_data']['2']['value']}}</td>
+                                  <td>{{$order['meta_data']['2']['value'] or ''}}</td>
                                 </tr>
                                
                                 
                                 <tr>
                                   <th>Parcelas</th>
                                   
-                                  <td>{{$order['meta_data']['4']['value']}}</td>
+                                  <td>{{$order['meta_data']['4']['value'] or ' '}}</td>
                                   
                                 </tr>
                              
@@ -137,7 +146,7 @@
                               <tbody>
                                 <tr>
                                   <th style="width:50%">Subtotal:</th>
-                                  <td>$250.30</td>
+                                  <td>R$ {{$i}},00</td>
                                 </tr>
                                 <tr>
                                   <th style="width:50%">Descontos:</th>
@@ -184,6 +193,11 @@
           </div>
         </div>
         <!-- /page content -->
+
+        <script type="text/javascript">
+      
+          // October 26th 2017, 2:19:52 pm)
+        </script>
 
     
 @endsection

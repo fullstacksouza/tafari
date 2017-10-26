@@ -39,8 +39,8 @@
                   <li><a><i class="fa fa-shopping-cart"></i>Loja Virual<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{url('admin/loja/pedidos')}}">Pedidos</a></li>
-                      <li><a href="media_gallery.html">Media Gallery</a></li>
-                      <li><a href="typography.html">Typography</a></li>
+                      <li><a href="{{url('admin/loja/produtos')}}">Produtos</a></li>
+                      <li><a href="typography.html">Categorias</a></li>
                       <li><a href="icons.html">Icons</a></li>
                       <li><a href="glyphicons.html">Glyphicons</a></li>
                       <li><a href="widgets.html">Widgets</a></li>

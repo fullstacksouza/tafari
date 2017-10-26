@@ -132,6 +132,7 @@
     <script src="{{asset('painel/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js')}}"></script>
     <!-- bootstrap-daterangepicker -->
     <script src="{{asset('painel/vendors/moment/min/moment.min.js')}}"></script>
+    <script src="{{asset('painel/vendors/moment/locale/pt-br.js')}}"></script>
     <script src="{{asset('painel/vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 
     <!-- Custom Theme Scripts -->
@@ -160,5 +161,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   </body>
 
- 
+
 </html>

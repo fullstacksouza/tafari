@@ -25,4 +25,15 @@ class WoocommerceController extends Controller
         //dd($order);
     	return view('painel.store.order-detail',compact("order"));
     }
+
+    public function getProducts()
+    {
+        $products = Woocommerce::get('products');
+        return view('painel.store.products.list',compact('products'));
+    }
+
+    public function getProductDetail(Request $request)
+    {
+
+    }
 }
