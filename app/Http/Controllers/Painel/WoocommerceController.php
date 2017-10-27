@@ -36,4 +36,16 @@ class WoocommerceController extends Controller
     {
 
     }
+
+    public function addProduct(Request $request)
+    {
+            //separador de tags
+        /*$data = "kkk,sdsd,qsqd,dqdqd,dqdq,dqdq";
+    $slice =  explode(',', $data);
+foreach ($slice as $key ) {
+    # code...
+    echo $key."<br>";
+}*/
+        return $request->all();
+    }
 }

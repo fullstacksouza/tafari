@@ -41,6 +41,12 @@ Route::get('loja/pedidos','Painel\WoocommerceController@getOrders');
 Route::get('loja/pedidos/{id}/detalhes','Painel\WoocommerceController@getOrderDetail');
 //Loja-Produtos
 Route::get('loja/produtos','Painel\WoocommerceController@getProducts');
+Route::get('loja/produtos/adicionar',function()
+{	
+	return view("painel.store.products.add");
+});
+
+Route::post('loja/produtos/adicionar','Painel\WoocommerceController@addProduct');
 		
 	});
 

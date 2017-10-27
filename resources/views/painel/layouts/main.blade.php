@@ -157,9 +157,40 @@
     <script src="{{asset('painel/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
     <script src="{{asset('painel/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
 
-@yield('script')
+
+
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.1/classic/ckeditor.js"></script>
+
+<script>
+            ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .then( editor => {
+                    console.log( editor );
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
+        </script>
   </body>
 
 
+<script type="text/javascript">
+  var postData = $("#demo-form2").serializeArray();
+  $('#button').click(function(){
+      $.ajax({
+        type : "POST",
+        url  : "/admin/loja/produtos/adicionar",
+        data : postData,
+        error   : function (xhr, ajaxOptions, thrownError){
+         //alert(xhr.status);
+         alert("Verifique se você preencheu todos os campo");
+      },
+      success : function(data) { 
+        alert("produto adicionado")
+      }
+    });
+  })
+</script>
 </html>
