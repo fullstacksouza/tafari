@@ -37,16 +37,15 @@ Route::post('evento/adicionar', 'Painel\EventController@addEvent');//adicionar u
 Route::post('evento/{id}/deletar', 'Painel\EventController@deleteEvent');//remover um evento
 Route::post('evento/{id}/atualizar', 'Painel\EventController@updateEvent');//atualizar evento
 //Loja - Pedidos
-Route::get('loja/pedidos','Painel\WoocommerceController@getOrders');
+Route::get('loja/pedidos','Painel\StoreController@orders');
+Route::get('loja','Painel\StoreController@index');
 Route::get('loja/pedidos/{id}/detalhes','Painel\WoocommerceController@getOrderDetail');
 //Loja-Produtos
 Route::get('loja/produtos','Painel\WoocommerceController@getProducts');
-Route::get('loja/produtos/adicionar',function()
-{	
-	return view("painel.store.products.add");
-});
+Route::get('loja/produtos/adicionar','Painel\StoreController@addProduct');
 
-Route::post('loja/produtos/adicionar','Painel\WoocommerceController@addProduct');
+Route::get('loja/categorias','Painel\StoreController@categories');
+Route::post('loja/produtos/adicionar','Painel\StoreController@createProduct');
 		
 	});
 

@@ -1,4 +1,4 @@
-@extends('painel/layouts/main')
+@extends('painel/store/layouts/main')
 @section("content")
         <!-- page content -->
         <div class="right_col" role="main">

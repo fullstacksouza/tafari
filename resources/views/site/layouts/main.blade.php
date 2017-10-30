@@ -11,9 +11,7 @@
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<!-- Loading main css file -->
 		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" type="text/css" href="{{asset('painel/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('painel/vendors/bootstrap/dist/css/bootstrap.css')}}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+		
 		
 	
 

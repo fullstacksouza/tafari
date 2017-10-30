@@ -1,4 +1,4 @@
-@extends("painel.layouts.main")
+@extends("painel.store.layouts.main")
 @section('content')
 
         <!-- page content -->
@@ -153,18 +153,7 @@
                                   <td>R$ {{$order['discount_total']}}</td>
                                 </tr>
                                
-                                @foreach($order['shipping_lines'] as $envio)
-                                <tr>
-                                  <th>Envio</th>
-                                  
-                                  <td>{{$envio['method_title']}}</td>
-                                  
-                                </tr>
-                                <tr>
-                                  <th>Frete:</th>
-                                  <td>R$ {{$envio['total']}}</td>
-                                </tr>
-                                @endforeach
+                                
                                 <tr>
                                   <th>Total:</th>
                                   <td>R$ {{$order['total']}}</td>

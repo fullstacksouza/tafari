@@ -13,10 +13,7 @@ class WoocommerceController extends Controller
 
 		
 
-		$result =  Woocommerce::get('orders');
 		
-
-		return view("painel.store.orders",compact("result"));
     }
 
     public function getOrderDetail(Request $request)
