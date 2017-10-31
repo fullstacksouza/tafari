@@ -361,5 +361,22 @@ ga('send', 'pageview');
 
 </script>
 	
+
+  <script type="text/javascript">
+
+
+
+//on change hide all divs linked to select and show only linked to selected option
+$('#variation-select').change(function(){
+      var price = $("#regular-price").val();
+      var saleprice = $("#sale-price").val();
+      $("#variation-price").val(price);
+      $("#variation-sale-price").val(saleprice);
+
+    //show only element connected to selected option
+    $(".collapse").collapse('show');
+    
+});
+  </script>
   </body>
 </html>

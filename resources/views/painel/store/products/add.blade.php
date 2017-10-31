@@ -31,6 +31,8 @@
                         </li>
                         <li role="presentation" class=""><a href="#tab_content5" role="tab" id="profile-tab5" data-toggle="tab" aria-expanded="false">Atributos</a>
                         </li>
+                        <li role="presentation" class=""><a href="#tab_content6" role="tab" id="profile-tab6" data-toggle="tab" aria-expanded="false">Variaçoes</a>
+                        </li>
 
                         <li role="presentation" class=""><a href="#tab_content6" role="tab" id="profile-tab6" data-toggle="tab" aria-expanded="false">Imagens</a>
                         </li>
@@ -41,6 +43,19 @@
                     <br />
                     <form id="demo-form2" novalidate class="form-horizontal form-label-left" method="post" action="{{url('admin/loja/produtos/adicionar')}}">
                       {{csrf_field()}}
+
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Tipo de produto</label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="selectpicker" data-live-search="true" name='product-type' multiple>
+                             
+                              <option value="simple" data-tokens="simples">Produto simples</option>
+                                 <option value="variable" data-tokens="variavel">Produto variavel</option>
+                              
+                             
+                          </select>
+                        </div>
+                      </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nome <span class="required">*</span>
                         </label>
@@ -93,7 +108,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Preço<span class="required">*</span>
                         </label>
                            <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="price" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="regular-price" name="regular-price" required="required" class="form-control col-md-7 col-xs-12">
                           </div>
                       </div>
 
@@ -101,7 +116,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Preço promocional<span class="required">*</span>
                         </label>
                            <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="sale-price" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="sale-price" name="sale-price" required="required" class="form-control col-md-7 col-xs-12">
                           </div>
                       </div>
 
@@ -250,6 +265,7 @@
                           <div class="x_content">
                           <div class="form-horizontal form-label-left">
                     <br />
+
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nome<span class="required">*</span>
                         </label>
@@ -266,6 +282,68 @@
                   <i class="glyphicon glyphicon-question-sign"></i>
                       </div>
 
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          
+                          <center><button class="btn btn-primary">Adicionar</button></center>
+                         
+                        </div>
+                      </div>
+                        </div>
+                  </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="tab_content6" aria-labelledby="profile-tab">
+                          <div class="x_content">
+                          <div class="form-horizontal form-label-left">
+                    <br />
+
+                    
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Valores Padrao</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select id="heard" name='stock-status' class="form-control" required>
+                            <option value=true>Sem valor padrao</option>
+                            <option value=false>Variação X</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">#003</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+                          <select id="variation-select" name='stock-status' class="form-control" required>
+                            <option value=0>Selecione</option>
+                            <option value=1>Tamanho X</option>
+                            <option value=2>Tamanho Y</option>
+                            <option value=3>Tamanho Z</option>
+                            
+                          </select>
+                          <hr>
+                          <div id="demo" class="collapse">
+
+                          <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="variation-price">Preço<span class="required">*</span>
+                        </label>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="variation-price" name="price" required="required" class="form-control col-md-7 col-xs-12">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Preço promocional<span class="required">*</span>
+                        </label>
+                           <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="variation-sale-price" name="sale-price" required="required" class="form-control col-md-7 col-xs-12">
+                          </div>
+                      </div>
+                                 </div>
+
+                            </div>
+                      </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
